@@ -1,4 +1,6 @@
-// const data = await verseRetriever.getVerseWords("Genesis 1:1");
+// const verse = await verseRetriever.getVerseWords("Genesis 1:1");
+// const words = verse.words;
+// const copyright = verse.copyright;
 
 const verseRetriever = (function () {
   let numberOfApiCalls = 0;
@@ -104,10 +106,15 @@ const verseRetriever = (function () {
     if (!containsBookName(searchText)) return;
 
     numberOfApiCalls++;
-    if (numberOfApiCalls > 100) {
+    localStorage.numberOfApiCallsForVerseRetriever++;
+    if (
+      numberOfApiCalls > 100 ||
+      localStorage.numberOfApiCallsForVerseRetriever > 100
+    ) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         numberOfApiCalls = 0;
+        localStorage.numberOfApiCallsForVerseRetriever = 0;
       }, 6 * 60 * 60 * 1000);
       return;
     }
