@@ -1,19 +1,15 @@
-# Template for convenience script repos ![version](https://img.shields.io/github/release/hchiam/convenience?style=flat-square) [![HitCount](http://hits.dwyl.com/hchiam/convenience.svg)](http://hits.dwyl.com/hchiam/convenience)
+# verse-retriever ![version](https://img.shields.io/github/release/hchiam/verse-retriever?style=flat-square) [![HitCount](http://hits.dwyl.com/hchiam/verse-retriever.svg)](http://hits.dwyl.com/hchiam/verse-retriever)
 
-# **NOTE: EVERYTHING ABOVE THIS LINE IS MEANT TO BE EDITED**
-
-With [`gh`](https://github.com/hchiam/learning-gh), you can quickly use this repo from CLI: `gh repo clone hchiam/convenience && cd convenience`. Everything else in this README.md is boilerplate. Delete this note section when ready.
-
-# **NOTE: EVERYTHING BELOW THIS LINE IS MEANT TO BE EDITED**
+TODO:
 
 [Live demo](https://codepen.io/hchiam/pen/...)
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/convenience@master/someFileName.js
+https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@master/verse-retriever.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/convenience@1.0.0/someFileName.js
+https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js
 ```
 
 Example usage:
@@ -26,13 +22,11 @@ CDN usage:
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/convenience@1.0.0/someFileName.js"
-  integrity="sha384-L0ng4lphAnum3r1C57r1N9"
+  src="https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js"
+  integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
   crossorigin="anonymous"
 ></script>
 ```
-
-<!-- uncomment the part with someFileName.js in get-integrity.sh and edit the file name as needed: -->
 
 ```bash
 # get the thing to put into integrity="...":
