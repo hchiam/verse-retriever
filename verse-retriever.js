@@ -106,15 +106,12 @@ const verseRetriever = (function () {
     if (!containsBookName(searchText)) return;
 
     numberOfApiCalls++;
-    localStorage.numberOfApiCallsForVerseRetriever++;
-    if (
-      numberOfApiCalls > 100 ||
-      localStorage.numberOfApiCallsForVerseRetriever > 100
-    ) {
+    updateLocalStorage(getLocalStorage() + 1);
+    if (numberOfApiCalls > 100 || getLocalStorage > 100) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         numberOfApiCalls = 0;
-        localStorage.numberOfApiCallsForVerseRetriever = 0;
+        updateLocalStorage(0);
       }, 6 * 60 * 60 * 1000);
       return;
     }
@@ -132,6 +129,23 @@ const verseRetriever = (function () {
 
   function containsBookName(text) {
     return bookNames.find((book) => text.includes(book));
+  }
+
+  function updateLocalStorage(newValue) {
+    try {
+      if (typeof window.localStorage === "undefined") return;
+      localStorage.numberOfApiCallsForVerseRetriever = newValue;
+    } catch (error) {
+      return undefined;
+    }
+  }
+  function getLocalStorage() {
+    var output = undefined;
+    try {
+      if (typeof window.localStorage === "undefined") return;
+      output = localStorage.numberOfApiCallsForVerseRetriever;
+    } catch (error) {}
+    return output;
   }
 
   return {

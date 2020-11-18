@@ -7,7 +7,7 @@ https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@master/verse-retriever.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js
+https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@2.0.0/verse-retriever.js
 ```
 
 ## Example usage:
@@ -33,7 +33,7 @@ https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js
 ```html
 <script
   src="https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js"
-  integrity="sha384-DDYnquVzvSfHNKvWISnY2V4yeNKRtSlDFV/o5lbTXsJ8vHw2TJrt9RDEaB0P5M8e"
+  integrity="sha384-xJh5lHAnNs01jNNsYjM1G1PhXCdCmcbTVHPOQugWwnSBHrW0E3nbJaZ8GczwE2qr"
   crossorigin="anonymous"
 ></script>
 ```
