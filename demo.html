@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+  </head>
+  <body>
+    <div id="verse"></div>
+    <div id="copyright"></div>
+    <script src="verse-retriever.js"></script>
+    <script>
+      tryItOut();
+      async function tryItOut() {
+        const verse = await verseRetriever.getVerseWords("Genesis 1:1");
+        const words = verse.words;
+        const copyright = verse.copyright;
+        document.getElementById("verse").innerHTML = words;
+        document.getElementById("copyright").innerHTML = copyright;
+      }
+    </script>
+  </body>
+</html>
