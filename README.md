@@ -10,7 +10,7 @@ https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@master/verse-retriever.js
 https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js
 ```
 
-Example usage:
+## Example usage:
 
 ```html
 <div id="verse"></div>
@@ -28,7 +28,7 @@ Example usage:
 </script>
 ```
 
-CDN usage:
+## CDN usage:
 
 ```html
 <script
