@@ -2,7 +2,7 @@
 
 TODO:
 
-[Live demo](https://codepen.io/hchiam/pen/...)
+[Live demo](https://codepen.io/hchiam/pen/WNxWXOP)
 
 ```js
 https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@master/verse-retriever.js
