@@ -32,7 +32,7 @@ https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@2.0.0/verse-retriever.js
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@1.0.0/verse-retriever.js"
+  src="https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@2.0.0/verse-retriever.js"
   integrity="sha384-xJh5lHAnNs01jNNsYjM1G1PhXCdCmcbTVHPOQugWwnSBHrW0E3nbJaZ8GczwE2qr"
   crossorigin="anonymous"
 ></script>
