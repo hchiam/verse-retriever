@@ -9,7 +9,7 @@ https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@main/verse-retriever.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@2.1.0/verse-retriever.js
+https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@3.0.0/verse-retriever.js
 ```
 
 ## Example usage:
@@ -34,8 +34,8 @@ https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@2.1.0/verse-retriever.js
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@2.1.0/verse-retriever.js"
-  integrity="sha384-bAm/OxSMFL8TtCvm4MA4DI+HZN2xq1GCD2SqxIr2f6rLt0QboQZas6dZEemXhnrX"
+  src="https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@3.0.0/verse-retriever.js"
+  integrity="sha384-6XOcJ0/cieEomxQzsHciMQTArsKFsv5p3OHz2XHx7UINIWH9/P31s+2jnwDc7qKm"
   crossorigin="anonymous"
 ></script>
 ```
