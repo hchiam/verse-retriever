@@ -109,7 +109,7 @@ const verseRetriever = (function () {
 
     numberOfApiCalls++;
     updateLocalStorage(getLocalStorage() + 1);
-    if (numberOfApiCalls > 100 || getLocalStorage > 100) {
+    if (numberOfApiCalls > 50 || getLocalStorage > 50) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         numberOfApiCalls = 0;
