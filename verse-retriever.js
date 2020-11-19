@@ -103,7 +103,9 @@ const verseRetriever = (function () {
   async function getVerseWords(searchText) {
     if (!searchText) return;
 
-    if (!containsBookName(searchText)) return;
+    const verseLocation = getVerseLocationFromSearchText(searchText);
+
+    if (!verseLocation) return;
 
     numberOfApiCalls++;
     updateLocalStorage(getLocalStorage() + 1);
@@ -116,13 +118,13 @@ const verseRetriever = (function () {
       return;
     }
 
-    const urlAPICall = `https://bibleverse.glitch.me/get-verse/${searchText}`;
+    const urlAPICall = `https://bibleverse.glitch.me/get-verse/${verseLocation}`;
     return await fetch(urlAPICall)
       .then((res) => res.json())
       .then((res) => {
         const verseWordsHtml = res.content;
         const copyright = res.copyright.trim();
-        return { words: verseWordsHtml, copyright };
+        return { words: verseWordsHtml, copyright, location: verseLocation };
       })
       .catch((error) => console.log(error));
   }
@@ -139,6 +141,7 @@ const verseRetriever = (function () {
       return undefined;
     }
   }
+
   function getLocalStorage() {
     var output = undefined;
     try {
@@ -148,8 +151,18 @@ const verseRetriever = (function () {
     return output;
   }
 
+  function getVerseLocationFromSearchText(searchText) {
+    var bookNameWithChaptersAndVerses =
+      "([" + bookNames.join("|") + "] \\d+-?\\d*:?\\d*(-\\d+)?)\\D*?";
+    var regex = new RegExp(bookNameWithChaptersAndVerses, "g");
+    var results = regex.exec(searchText);
+    var verseLocation = results && results[1];
+    return verseLocation; // example: Genesis 1:1
+  }
+
   return {
     getVerseWords,
     containsBookName,
+    getVerseLocationFromSearchText,
   };
 })();
