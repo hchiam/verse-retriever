@@ -3,7 +3,7 @@
 [Live demo](https://codepen.io/hchiam/pen/WNxWXOP)
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@master/verse-retriever.js
+https://cdn.jsdelivr.net/gh/hchiam/verse-retriever@main/verse-retriever.js
 ```
 
 ```js
