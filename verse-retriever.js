@@ -108,7 +108,7 @@ const verseRetriever = (function () {
     if (!verseLocation) return;
 
     numberOfApiCalls++;
-    updateLocalStorage(getLocalStorage() + 1);
+    updateLocalStorage(parseInt(getLocalStorage()) + 1);
     if (numberOfApiCalls > 50 || getLocalStorage > 50) {
       clearTimeout(timer);
       timer = setTimeout(() => {
@@ -136,24 +136,24 @@ const verseRetriever = (function () {
   function updateLocalStorage(newValue) {
     try {
       if (typeof window.localStorage === "undefined") return;
-      localStorage.numberOfApiCallsForVerseRetriever = newValue;
+      localStorage.numberOfApiCallsForVerseRetriever = newValue || 0;
     } catch (error) {
-      return undefined;
+      return 0;
     }
   }
 
   function getLocalStorage() {
-    var output = undefined;
+    var output = 0;
     try {
       if (typeof window.localStorage === "undefined") return;
-      output = localStorage.numberOfApiCallsForVerseRetriever;
+      output = localStorage.numberOfApiCallsForVerseRetriever || 0;
     } catch (error) {}
     return output;
   }
 
   function getVerseLocationFromSearchText(searchText) {
     var bookNameWithChaptersAndVerses =
-      "([" + bookNames.join("|") + "] \\d+-?\\d*:?\\d*(-\\d+)?)\\D*?";
+      "((" + bookNames.join("|") + ") \\d+-?\\d*:?\\d*(-\\d+)?)\\D*?";
     var regex = new RegExp(bookNameWithChaptersAndVerses, "g");
     var results = regex.exec(searchText);
     var verseLocation = results && results[1];
