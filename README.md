@@ -1,5 +1,7 @@
 # verse-retriever [![version](https://img.shields.io/github/release/hchiam/verse-retriever?style=flat-square)](https://github.com/hchiam/verse-retriever/releases)
 
+This is just a wrapper function that calls an API. For test use only.
+
 [Live demo](https://codepen.io/hchiam/pen/WNxWXOP)
 
 ```js
