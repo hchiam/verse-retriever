@@ -1,4 +1,4 @@
-# verse-retriever ![version](https://img.shields.io/github/release/hchiam/verse-retriever?style=flat-square) [![HitCount](http://hits.dwyl.com/hchiam/verse-retriever.svg)](http://hits.dwyl.com/hchiam/verse-retriever)
+# verse-retriever ![version](https://img.shields.io/github/release/hchiam/verse-retriever?style=flat-square)
 
 [Live demo](https://codepen.io/hchiam/pen/WNxWXOP)
 
